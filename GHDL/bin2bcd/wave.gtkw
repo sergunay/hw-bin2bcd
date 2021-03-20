@@ -1,0 +1,36 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Fri Mar 19 20:46:16 2021
+[*]
+[dumpfile] "/home/serg/ws/eda/bin2bcd/GHDL/bin2bcd/sim/bin2bcd_tb.ghw"
+[dumpfile_mtime] "Fri Mar 19 13:20:45 2021"
+[dumpfile_size] 3419
+[savefile] "/home/serg/ws/eda/bin2bcd/GHDL/bin2bcd/wave.gtkw"
+[timestart] 64400000
+[size] 1864 1016
+[pos] -201 -201
+*-27.000000 273100000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.bin2bcd_tb.
+[treeopen] top.bin2bcd_tb.duv.
+[sst_width] 233
+[signals_width] 176
+[sst_expanded] 1
+[sst_vpaned_height] 289
+@28
+top.bin2bcd_tb.sim_clk
+top.bin2bcd_tb.duv_busy
+@24
+#{top.bin2bcd_tb.sim_data[9:0]} top.bin2bcd_tb.sim_data[9] top.bin2bcd_tb.sim_data[8] top.bin2bcd_tb.sim_data[7] top.bin2bcd_tb.sim_data[6] top.bin2bcd_tb.sim_data[5] top.bin2bcd_tb.sim_data[4] top.bin2bcd_tb.sim_data[3] top.bin2bcd_tb.sim_data[2] top.bin2bcd_tb.sim_data[1] top.bin2bcd_tb.sim_data[0]
+#{top.bin2bcd_tb.duv_bcd2[3:0]} top.bin2bcd_tb.duv_bcd2[3] top.bin2bcd_tb.duv_bcd2[2] top.bin2bcd_tb.duv_bcd2[1] top.bin2bcd_tb.duv_bcd2[0]
+#{top.bin2bcd_tb.duv_bcd1[3:0]} top.bin2bcd_tb.duv_bcd1[3] top.bin2bcd_tb.duv_bcd1[2] top.bin2bcd_tb.duv_bcd1[1] top.bin2bcd_tb.duv_bcd1[0]
+#{top.bin2bcd_tb.duv_bcd0[3:0]} top.bin2bcd_tb.duv_bcd0[3] top.bin2bcd_tb.duv_bcd0[2] top.bin2bcd_tb.duv_bcd0[1] top.bin2bcd_tb.duv_bcd0[0]
+@28
+top.bin2bcd_tb.duv.ireq
+top.bin2bcd_tb.duv.busy
+top.bin2bcd_tb.duv.data_load
+@24
+#{top.bin2bcd_tb.duv.data_reg[9:0]} top.bin2bcd_tb.duv.data_reg[9] top.bin2bcd_tb.duv.data_reg[8] top.bin2bcd_tb.duv.data_reg[7] top.bin2bcd_tb.duv.data_reg[6] top.bin2bcd_tb.duv.data_reg[5] top.bin2bcd_tb.duv.data_reg[4] top.bin2bcd_tb.duv.data_reg[3] top.bin2bcd_tb.duv.data_reg[2] top.bin2bcd_tb.duv.data_reg[1] top.bin2bcd_tb.duv.data_reg[0]
+#{top.bin2bcd_tb.duv.dbit_cnt_reg[3:0]} top.bin2bcd_tb.duv.dbit_cnt_reg[3] top.bin2bcd_tb.duv.dbit_cnt_reg[2] top.bin2bcd_tb.duv.dbit_cnt_reg[1] top.bin2bcd_tb.duv.dbit_cnt_reg[0]
+[pattern_trace] 1
+[pattern_trace] 0

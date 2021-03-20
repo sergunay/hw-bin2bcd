@@ -1,0 +1,27 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Thu Mar 18 08:26:56 2021
+[*]
+[dumpfile] "/home/serg/ws/eda/bin2bcd/GHDL/sim/bcd_digit_tb.ghw"
+[dumpfile_mtime] "Thu Mar 18 08:24:59 2021"
+[dumpfile_size] 3151
+[savefile] "/home/serg/ws/eda/bin2bcd/GHDL/wave.gtkw"
+[timestart] 0
+[size] 1864 1016
+[pos] -51 -51
+*-30.000000 687000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.bcd_digit_tb.
+[treeopen] top.bcd_digit_tb.duv.
+[sst_width] 233
+[signals_width] 134
+[sst_expanded] 1
+[sst_vpaned_height] 289
+@28
+top.bcd_digit_tb.sim_clk
+@22
+#{top.bcd_digit_tb.bcd_bcd[3:0]} top.bcd_digit_tb.bcd_bcd[3] top.bcd_digit_tb.bcd_bcd[2] top.bcd_digit_tb.bcd_bcd[1] top.bcd_digit_tb.bcd_bcd[0]
+@28
+top.bcd_digit_tb.duv.odata_bit
+[pattern_trace] 1
+[pattern_trace] 0
