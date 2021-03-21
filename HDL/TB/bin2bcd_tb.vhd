@@ -1,9 +1,9 @@
---! @file       #optional file name#
---! @brief      a short description what can be found in the file
---! @details    detailed description
---! @author     Selman Ergünay
+--! @file       bin2bcd_tb
+--! @brief      Testbench for bin2bcd module
+--! @details    Load test numbers and checks the output
+--! @author     Selman Ergunay
 --! @email      selmanerg@gmail.com
---! @date       2016-03-30
+--! @date       2021-03-21
 --------------------------------------------------------------------------------
 
 library ieee;
@@ -38,7 +38,7 @@ architecture tb of bin2bcd_tb is
 	-- Simulation control signals
 	signal sim_clk       : std_logic := '0';
 	signal sim_rst       : std_logic := '0';
-	signal sim_stop      : boolean 	:= FALSE;		-- stop simulation?
+	signal sim_stop      : boolean 	 := FALSE;		-- stop simulation?
 	signal sim_req       : std_logic := '0';
 	signal sim_data      : std_logic_vector(C_DATA_NBITS-1 downto 0) := (others=>'0');
 
@@ -79,7 +79,7 @@ begin
 			sim_rst				<= '0';
 		end procedure init;
 
-		procedure load(
+		procedure load_check(
 			constant data    : natural) is
 		begin
 			report "Loading test vector #" & integer'image(tv_num)& ": " & integer'image(data);
@@ -90,23 +90,36 @@ begin
 			sim_req  <= '0';
 			wait for 9*C_CLK_PER;
 
+			assert data mod 10 = unsigned(duv_bcd0)
+			report "ERROR: Data=" & integer'image(data) &
+                   " Digit0=" & integer'image(to_integer(unsigned(duv_bcd0)))
+			severity ERROR;
+
+			assert (data-(100*(data/100))) / 10 = unsigned(duv_bcd1)
+			report "ERROR: Data=" & integer'image(data) &
+                   " Digit0=" & integer'image(to_integer(unsigned(duv_bcd0)))
+			severity ERROR;
+
+			assert data/100 = unsigned(duv_bcd2)
+			report "ERROR: Data=" & integer'image(data) &
+                   " Digit0=" & integer'image(to_integer(unsigned(duv_bcd0)))
+			severity ERROR;
+
 			tv_num    := tv_num + 1;
-		end procedure load;
+		end procedure load_check;
 
 	begin
 
 		init;
 
-		load(365);
-		load(999);
+		load_check(365);
+		load_check(999);
 		wait for 4*C_CLK_PER;
-		load(836);
-		load(2);
-		load(325);
+		load_check(836);
+		load_check(2);
+		load_check(325);
 		sim_stop 	<= True;
 		wait;
 	end process STIM_PROC;
-
-
 
 end architecture tb;

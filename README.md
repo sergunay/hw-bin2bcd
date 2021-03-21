@@ -1,6 +1,6 @@
-Project name  : PROJ-NAME
-Release       : V.R
-Date          : YYYY-MM-DD
+Project name  : hw-bin2bcd
+Release       : 0.1
+Date          : 2021-03-21
 
 General Description
 --------------------------------------------------------------------------

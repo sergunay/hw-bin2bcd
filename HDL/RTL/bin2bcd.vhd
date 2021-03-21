@@ -1,9 +1,11 @@
---! @file       #optional file name#
---! @brief      a short description what can be found in the file
---! @details    detailed description
---! @author     Selman Ergünay
+--! @file       bin2bcd.vhd
+--! @brief      Binary to BCD converter
+--! @details    Converts input data with a request signal to BCD digits.
+--!             During conversion, Busy signal is HIGH and requests are ignored.
+--!             After DATA_NBITS clock cycle, BCD outputs are ready and Busy is LOW.
+--! @author     Selman Ergunay
 --! @email      selmanerg@gmail.com
---! @date       2016-03-30
+--! @date       2021-03-21
 ----------------------------------------------------------------------------
 
 library ieee;
@@ -12,7 +14,6 @@ use ieee.numeric_std.all;
 
 ----------------------------------------------------------------------------
 entity bin2bcd is
-----------------------------------------------------------------------------
 	generic(
 		DATA_NBITS : natural := 10);
 	port(
@@ -26,7 +27,7 @@ entity bin2bcd is
 		oBcd1 : out std_logic_vector(3 downto 0);
 		oBcd2 : out std_logic_vector(3 downto 0));
 end entity bin2bcd;
-
+----------------------------------------------------------------------------
 architecture rtl of bin2bcd is
 
 	signal digit_en     : std_logic := '0';
@@ -57,6 +58,7 @@ architecture rtl of bin2bcd is
 			oBcd       : out std_logic_vector(3 downto 0));
 	end component;
 
+----------------------------------------------------------------------------
 begin
 
 	-- Datapath
@@ -104,6 +106,7 @@ begin
 			oData_bit  => data_bit3,
 			oBcd       => bcd_2(3 downto 0));
 
+	-- BCD outputs
 	oBcd0 <= bcd_0;
 	oBcd1 <= bcd_1;
 	oBcd2 <= bcd_2;
@@ -141,9 +144,7 @@ begin
 	data_load  <= iReq and not busy;
 
 	data_shift <= busy;
-
 	digit_en   <= busy;
-
 	oBusy      <= busy;
 
 end architecture rtl;
